@@ -33,8 +33,8 @@ class Letter
   end
 
   def wrong_pos(str)
-    # Bold white text on yellow background
-    coloured(37, 43, str)
+    # Bold yellow text on black background
+    coloured(33, 40, str)
   end
 
   def coloured(fg, bg, str)

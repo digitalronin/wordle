@@ -38,6 +38,6 @@ class Letter
   end
 
   def coloured(fg, bg, str)
-    "\e[1;#{fg};#{bg}m#{str}\e[0m"
+    "\e[1;#{fg};#{bg}m#{str.upcase}\e[0m"
   end
 end

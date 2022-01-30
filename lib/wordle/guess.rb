@@ -20,7 +20,7 @@ class Guess
   def letter_results(str)
     rtn = []
     str.split("").each_with_index do |char, i|
-      rtn.push(Letter.new(char.upcase, status(char, i)))
+      rtn.push(Letter.new(char, status(char, i)))
     end
 
     rtn

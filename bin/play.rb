@@ -26,6 +26,11 @@ while running
     puts "Secret word: #{secret}"
   when /^[a-z]{5}$/
     guess_count += 1
-    puts Guess.new(input.downcase, secret).formatted
+    guess = Guess.new(input.downcase, secret)
+    puts guess.formatted
+    if guess.correct?
+      running = false
+      puts "Success in #{guess_count} guesses"
+    end
   end
 end

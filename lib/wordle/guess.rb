@@ -8,7 +8,11 @@ class Guess
   end
 
   def formatted
-    @letters.map(&:formatted).join
+    letters.map(&:formatted).join
+  end
+
+  def correct?
+    letters.map(&:status).uniq == [:correct]
   end
 
   private
